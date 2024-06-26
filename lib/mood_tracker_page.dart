@@ -20,10 +20,10 @@ class _MoodTrackerPageState extends State<MoodTrackerPage> {
           _selectedMoodMessage = 'You selected: Sad 😢❤️\nIt\'s okay to feel sad. Take care of yourself!';
           break;
         case 'Angry':
-          _selectedMoodMessage = 'You selected: Angry 😡❤️\nTake deep breaths and try to relax.';
+          _selectedMoodMessage = 'You selected: Angry 😡❤️\nTake deep breaths and try to relax.Everything will be alright.';
           break;
         case 'Scared':
-          _selectedMoodMessage = 'You selected: Scared 😨❤️\nIt\'s okay to be scared. You are not alone.';
+          _selectedMoodMessage = 'You selected: Scared 😨❤️\nIt\'s okay to be scared. You are not alone.Darr ke aage jeet hai';
           break;
         case 'Tired':
           _selectedMoodMessage = 'You selected: Tired 😴❤️\nRest well and take care of yourself!';
