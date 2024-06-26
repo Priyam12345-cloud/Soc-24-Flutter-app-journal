@@ -1,0 +1,1 @@
+# Soc-24-Flutter-app-journal
