@@ -43,10 +43,14 @@ class _MoodTrackerPageState extends State<MoodTrackerPage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+         
           children: <Widget>[
             const Text(
+               
+              
               'How are you feeling today?',
               style: TextStyle(fontSize: 24),
+               
             ),
             const SizedBox(height: 20),
             Row(

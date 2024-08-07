@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart'; // Import for date formatting
 import 'mood_tracker_page.dart'; // Import the mood tracker page
+import 'my_component.dart'; // Import the custom bottom navbar
+import 'date_selector.dart'; // Import the DateSelector
 
 void main() {
   runApp(const MyApp());
@@ -31,6 +34,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String _formattedDate() {
+    return DateFormat('yyyy-MM-dd').format(DateTime.now());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,16 +45,19 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const DateSelector(), // Add the DateSelector widget
+            const SizedBox(height: 20),
             Container(
               color: Colors.pink,
               padding: const EdgeInsets.all(16.0),
-              child: const Text(
-                'Today\'s Date: 2024-06-26', // You can use a dynamic date here
-                style: TextStyle(color: Colors.white, fontSize: 18),
+              child: Text(
+                'Today\'s Date: ${_formattedDate()}', // Dynamic date
+                style: const TextStyle(color: Colors.white, fontSize: 18),
               ),
             ),
             const SizedBox(height: 20),
@@ -63,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      bottomNavigationBar: const MyComponent(), // Add the bottom navbar
     );
   }
 }
